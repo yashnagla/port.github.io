@@ -4,7 +4,7 @@
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0.7rem;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     font-family: "Work Sans", sans-serif;
@@ -12,21 +12,20 @@
 
 
 :root {
-    --heading: rgb(0, 10, 45);
-    --para: #777;
-    --para-tint: #e4e4e4;
-    --white: #fff;
-    --black:#212529;
-    --helper: #8490ff;
-    --helper-tint: #f3f4ff;
     --bg: rgb(249, 249, 255);
+    --black:#212529;
     --gradient: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
     --gradientSupport: -webkit-linear-gradient(0deg,
             rgb(132, 144, 255) 0%,
             rgb(98, 189, 252) 100%);
+    --heading: rgb(0, 10, 45);
+    --helper: #8490ff;
+    --helper-tint: #f3f4ff;
+    --para: #777;
+    --para-tint: #e4e4e4;
     --shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
     --shadowSupport: 0 2rem 2rem 0 rgba(132, 144, 255, 0.5);
-
+    --white: #fff;
 }
 
 html {
