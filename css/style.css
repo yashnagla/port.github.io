@@ -214,6 +214,11 @@ position: relative;
     align-items: center;
 }
 
+.section-hero-image img{
+    border-radius: 15px;
+    box-shadow: 2rem -2rem 0 0 var(--helper);
+}
+
 .hero-img{
     max-width: 80%;
 }
@@ -223,11 +228,134 @@ position: relative;
 
 /* Bio Section Starts */
 
-.bio-image{}
+.bio-data-para{
+    padding-bottom: 3rem;
+}
 
 .bio-image img{
+    border-radius: 15px;
     width: 80%;
-    box-shadow: -2rem 2rem 0 0 var(--helper);
+    box-shadow: -2rem -2rem 0 0 var(--helper);
+    display: inline-block;
+}
+
+.bio-data-stat{
+    display: flex;
+    padding: 0rem 0rem 3.5rem 0rem;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.bio-stat h3{
+    margin-bottom: 1rem;
+}
+
+.bio-progress-bar{
+    width: 90%;
+    height: 0.8rem;
+    background-color: var(--para-tint);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.bio-progress-bar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: inherit;
+    background: var(--gradientSupport);
+    border-radius: 1rem;
+}
+
+.bio-progress-2::before{
+    width: 80%;
+}
+
+.bio-progress-3::before{
+    width: 50%;
+}
+
+.bio-progress-4::before{
+    width: 69%;
+}
+.bio-progress-5::before{
+    width: 49%;
+}
+
+.bio-progress-6::before{
+    width: 60%;
+}
+
+.bio-progress-7::before{
+    width: 60%;
+}
+
+.bio-progress-8::before{
+    width: 50%;
+}
+
+.bio-progress-bar span{
+    position: absolute;
+    top: 1.8rem;
+    width: 4rem;
+    height: 2rem;
+    background: var(--helper);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 1rem;
+    outline: 0;
+}
+
+.bio-progress-bar span{
+    left: 83%;
+}
+
+.bio-progress-2 span{
+    left: 73%;
+}
+
+.bio-progress-3 span{
+    left: 43%;
+}
+
+.bio-progress-4 span{
+    left: 62%;
+}
+
+.bio-progress-5 span{
+    left: 43%;
+}
+
+.bio-progress-6 span{
+    left: 53%;
+}
+
+.bio-progress-7 span{
+    left: 53%;
+}
+
+.bio-progress-8 span{
+    left: 43%;
+}
+
+/* To create Caret */
+.bio-progress-bar span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1rem solid var(--helper);
+    border-color: transparent;
+    /* border-bottom-color: var(--helper); */
+    border-bottom-color: var(--helper);
+    top: -1.8rem;
+    /* right: 18px; */
 }
 
 /* Bio Section Ends */
