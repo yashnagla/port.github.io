@@ -16,6 +16,7 @@
     --para: #777;
     --para-tint: #e4e4e4;
     --white: #fff;
+    --black:#212529;
     --helper: #8490ff;
     --helper-tint: #f3f4ff;
     --bg: rgb(249, 249, 255);
@@ -26,38 +27,77 @@
     --shadow: 0px 0px 20px 0px rgb(132, 144, 255 / 20%);
 }
 
-html{
-    font-size: 62.5%;  /* 1rem = 10px */
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
 }
 
 h1,
 h2,
 h3,
-h4{
-    font-family:  'Poopins', sans-serif;
+h4 {
+    font-family: 'Poopins', sans-serif;
 }
 
-h1{
+h1 {
     color: var(--heading);
     font-size: 6rem;
     font-weight: 600;
 }
 
-h3{
+h3 {
     font-size: 1.8rem;
     font-weight: 400;
 }
 
-p{
+p {
     color: var(--para);
     line-height: 1.6;
     font-size: 1.7rem;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
+
+
+/* Header Section Starts */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 4.8rem;
+    height: 10rem;
+    background-color: var(--bg);
+}
+
+.header .logo {
+    height: 3rem;
+}
+
+.navbar-lists {
+    display: flex;
+    gap:  2.5rem;
+}
+
+.navbar-link:link,  
+.navbar-link:visited{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--black);
+    transition: all 0.3s linear;
+}
+
+.navbar-link:hover,
+.navbar-link:active{
+    color: var(--helper);
+}
+
+/* Header Section Ends */
