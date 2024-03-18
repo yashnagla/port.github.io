@@ -84,7 +84,17 @@ li {
 
 .grid-two-column{
     grid-template-columns: repeat(2, 1fr);
-    /* Here 2 is number of items */
+    /* Here 2 is number of columns */
+}
+
+.grid-three-column{
+    grid-template-columns: repeat(3, 1fr);
+    /* Here 3 is number of columns */
+}
+
+.grid-four-column{
+    grid-template-columns: repeat(4, 1fr);
+    /* Here 4 is number of columns */
 }
 
 .btn{
@@ -359,3 +369,79 @@ position: relative;
 }
 
 /* Bio Section Ends */
+
+
+/* Portfolio Section Starts */
+
+.section-portfolio{
+    background: var(--bg);
+    transition: all 0.7s linear;
+}
+
+.section-portfolio p{
+    max-width: 60rem;
+}
+
+.p-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    margin: 3rem 0rem;
+}
+
+.portfolio-images{
+    gap: 3.2rem;
+    margin-top: 6.4rem;
+}
+
+.portfolio-images img{
+    height: 20rem;
+    width: 100%;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-overlay{
+    position: relative;
+    overflow: hidden;
+}
+
+.img-overlay .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: var(--gradientSupport);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: 1rem;
+}
+
+.img-overlay:hover > .overlay{
+    transform: translateY(0);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.img-overlay .common-heading{
+    margin: 0;
+    color: var(--white);
+    text-transform: none;
+}
+
+.p-btn:hover{
+    transform: translateY(-1rem);
+}
+
+.p-btn-active{
+    transform: translateY(-1rem);
+}
+
+/* Portfolio Section Ends */
