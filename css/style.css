@@ -224,7 +224,7 @@ li {
 }
 
 .section-hero-image img {
-    border-radius: 15px;
+    border-radius: 1.5rem;
     box-shadow: 2rem -2rem 0 0 var(--helper);
 }
 
