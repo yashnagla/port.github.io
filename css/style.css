@@ -23,9 +23,10 @@
     --helper-tint: #f3f4ff;
     --para: #777;
     --para-tint: #e4e4e4;
-    --shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
+    --shadow: 0rem 0rem 2rem 0rem rgb(102, 111, 192);
     --shadowSupport: 0 2rem 2rem 0 rgba(132, 144, 255, 0.5);
     --white: #fff;
+    --icons-bg: rgb(144 172 209 / 20%);
 }
 
 html {
@@ -68,7 +69,7 @@ li {
 /* Reusable Code Section Starts */
 
 .section {
-    padding: 9rem 0rem;
+    padding: 4.5rem 0rem;
 }
 
 .container {
@@ -242,7 +243,7 @@ li {
 }
 
 .bio-image img {
-    border-radius: 15px;
+    border-radius: 1.5rem;
     width: 80%;
     box-shadow: -2rem -2rem 0 0 var(--helper);
     display: inline-block;
@@ -440,8 +441,183 @@ li {
     transform: translateY(-1rem);
 }
 
-.p-image-not-active{
+.p-image-not-active {
     display: none;
 }
 
 /* Portfolio Section Ends */
+
+
+/* Counter Section Starts */
+
+.section-work-data {
+    background: var(--gradientSupport);
+    text-align: center;
+    transition: all 0.7s linear;
+    color: var(--white);
+}
+
+.counter-numbers {
+    font-size: 4.8rem;
+}
+
+.section-work-data p {
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+/* Counter Section Ends */
+
+
+/* Service Section Starts */
+
+.section-services {
+    transition: all 0.7s linear;
+}
+
+.section-services p {
+    max-width: 60rem;
+}
+
+.section-services .grid {
+    margin-top: 5rem;
+    row-gap: 5rem;
+}
+
+.service-box {
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    padding: 6.4rem 3.4rem;
+    transition: all 0.2s linear;
+}
+
+.service-box:hover,
+.service-box:active {
+    transform: translateY(-3rem);
+}
+
+.service-icon {
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--icons-bg);
+    display: inline-block;
+    border-radius: 100% 0% 100% 0% / 46% 48% 52% 54%;
+    /* border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%; */
+    padding: 1.4rem 1.8rem;
+    position: relative;
+    color: var(--heading);
+    animation: water-wave 2.5s linear infinite;
+}
+
+.service-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 100% 0% 100% 0% / 46% 48% 52% 54%;
+    /* background-color: var(--black); */
+    border: 0.1rem solid var(--black);
+    animation: water-wave 2.5s linear infinite;
+}
+
+@keyframes water-wave {
+
+    0%,
+    100% {
+        /* border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%; */
+        border-radius: 100% 0% 100% 0% / 46% 48% 52% 54%;
+    }
+
+    50% {
+        border-radius: 0% 100% 0% 100% / 46% 48% 52% 54%;
+    }
+}
+
+.service-box h3 {
+    text-transform: capitalize;
+    margin-top: 3rem 0 1rem 0;
+}
+
+/* Service Section Ends */
+
+
+/* Extracurricular Section Starts */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 9rem;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 1.8rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-client-msg::before{
+    content: "";
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translate(-50%);
+    border: 5rem solid var(--white);
+    border-color: transparent;
+    border-top-color: var(--helper-tint);
+}
+
+.swiper-client-msg p::before{
+    content: "\f10d";
+    position: absolute;
+    top: 0;
+    left: 4rem;
+    font-size: 5rem;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 700;
+    color: #ced3ff;
+}
+
+.swiper-client-msg p::after{
+    content: "\f10e";
+    position: absolute;
+    bottom: 0;
+    right: 4rem;
+    font-size: 5rem;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #ced3ff;
+}
+
+.swiper-client-msg{
+    padding: 5rem 8rem;
+    background: var(--white);
+    border-radius: 1rem;
+    text-align: left;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.swiper-client-data{
+    align-items: center;
+    margin-top: 3.2rem;
+    gap: 0.2rem;
+}
+
+.swiper-slide img {
+    max-width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--helper-tint);
+    display: block;
+    object-fit: cover;
+}
+
+/* Extracurricular Section Ends */
