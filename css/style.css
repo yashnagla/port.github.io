@@ -1,3 +1,5 @@
+/* Reusable Code Section Starts */
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
 
@@ -9,7 +11,6 @@
     font-family: "Poppins", sans-serif;
     font-family: "Work Sans", sans-serif;
 }
-
 
 :root {
     --bg: rgb(249, 249, 255);
@@ -67,14 +68,12 @@ li {
     list-style: none;
 }
 
-/* Reusable Code Section Starts */
-
 .section {
     padding: 4.5rem 0rem;
 }
 
 .container {
-    max-width: 90rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -102,7 +101,7 @@ li {
     background: var(--gradientSupport);
     padding: 1.6rem 3.2rem;
     border: none;
-    color: var(--helper-tint);
+    color: var(--white);
     display: inline-block;
     text-transform: uppercase;
     font-size: 1.8rem;
@@ -488,8 +487,8 @@ li {
 .service-box {
     text-align: center;
     box-shadow: var(--shadow);
-    border-radius: 1rem;
-    padding: 6.4rem 3.4rem;
+    border-radius: 2rem;
+    /* padding: 6.4rem 3.4rem; */
     transition: all 0.2s linear;
 }
 
@@ -565,7 +564,7 @@ li {
     padding: 1.25rem;
 }
 
-.swiper-client-msg::before{
+.swiper-client-msg::before {
     content: "";
     position: absolute;
     bottom: -10rem;
@@ -576,7 +575,7 @@ li {
     border-top-color: var(--helper-tint);
 }
 
-.swiper-client-msg p::before{
+.swiper-client-msg p::before {
     content: "\f10d";
     position: absolute;
     top: 0;
@@ -587,7 +586,7 @@ li {
     color: #ced3ff;
 }
 
-.swiper-client-msg p::after{
+.swiper-client-msg p::after {
     content: "\f10e";
     position: absolute;
     bottom: 0;
@@ -598,7 +597,7 @@ li {
     color: #ced3ff;
 }
 
-.swiper-client-msg{
+.swiper-client-msg {
     padding: 5rem 8rem;
     /* background: var(--white); */
     border-radius: 1rem;
@@ -607,7 +606,7 @@ li {
     position: relative;
 }
 
-.swiper-client-data{
+.swiper-client-data {
     align-items: center;
     margin-top: 3.2rem;
     gap: 0.2rem;
@@ -627,7 +626,7 @@ li {
 
 /* Freelancing Section Starts */
 
-.section-freelancing{
+.section-freelancing {
     background-image: url('../images/folio/3.jpg');
     background-repeat: no-repeat;
     background-size: 200rem;
@@ -638,31 +637,152 @@ li {
     text-align: center;
 }
 
-.section-freelancing .overlay{
+.section-freelancing .overlay {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--overlay);
-    opacity:  0.5;
+    opacity: 0.5;
 }
 
-.section-freelancing .container{
+.section-freelancing .container {
     position: relative;
 }
 
-.section-freelancing h2{
+.section-freelancing h2 {
     font-size: 5.4rem;
 }
 
-.section-freelancing span{
+.section-freelancing span {
     color: #a0f669;
 }
 
 .section-freelancing h2,
-.section-freelancing p{
+.section-freelancing p {
     color: var(--white);
     margin-bottom: 1.8rem;
 }
 
 /* Freelancing Section Ends */
+
+
+/* Contact Us Section Starts */
+
+.section-contact-main {
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-top: auto;
+    transition: all 0.3s linear;
+}
+
+.section-contact-main .grid {
+    gap: 3.2rem;
+}
+
+.section-contact-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.section-contact-main input,
+.section-contact-main textarea {
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid #c9c9c9;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-family: "work sans";
+    width: 100%;
+}
+
+.section-contact-main input [type="submit"] {
+    max-width: 30%;
+    border: none;
+}
+
+/* Contact Us Section Ends */
+
+
+/* Footer Section Starts */
+
+.section-footer {
+    background: var(--heading);
+    transition: all 0.7s linear;
+}
+
+.section-footer h3 {
+    color: var(--white);
+    margin-bottom: 4rem;
+}
+
+.f-about p {
+    color: #adadad;
+}
+
+.f-links ul,
+.f-services ul,
+.f-address address {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+.f-links li,
+.f-links a,
+.f-services li,
+.f-services a {
+    font-size: 1.8rem;
+    color: #adadad;
+    text-transform: capitalize;
+}
+
+.f-links span,
+.f-services span,
+.f-address span {
+    margin-right: 1rem;
+}
+
+.f-address p,
+.f-address p a {
+    font-style: normal;
+    color: #adadad;
+}
+
+.social-icons-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100%;
+}
+
+.f-social-icons {
+    margin: 0 1rem;
+    text-align: center;
+    color: #adadad;
+    display: inline-block;
+    display: inline-block;
+}
+
+.icons:hover {
+    box-shadow: var(--shadow);
+}
+
+.f-social-icons .icons {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--icons-bg);
+    padding: 1.4rem 1.8rem;
+    /* position: relative;   */
+    color: var(--white);
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+}
+
+.section-footer a:hover,
+.footer a:active {
+    color: var(--white);
+}
+
+/* Footer Section Ends */
