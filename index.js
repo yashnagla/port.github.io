@@ -45,7 +45,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 // ===============================================
-// Creating a Scroll To Top tabbed component
+// Creating a Scroll To Top Section
 // ===============================================
 
 const navbar = document.querySelector(".navbar");
@@ -64,3 +64,33 @@ const scrollTop = () => {
 };
 
 scrollElement.addEventListener("click", scrollTop) 
+
+
+
+// ===============================================
+// Animate Number Section
+// ===============================================
+
+const counterNum = document.querySelectorAll(".counter-numbers");
+
+const speed = 200;
+
+counterNum.forEach((curElem) => {
+  const updateNumber = () => {
+    const targetNumber = parseInt(curElem.dataset.number);
+    // console.log(targetNumber);
+
+    const intialNum = parseInt(curElem.innerText);
+    // console.log(intialNum);
+
+    const incrementNumber = Math.trunc(targetNumber / speed);
+    // console.log(incrementNumber);
+
+    if(intialNum < targetNumber) {
+      curElem.innerText = intialNum + incrementNumber;
+      setTimeout(updateNumber, 10);
+    }
+  };
+
+  updateNumber();
+});
