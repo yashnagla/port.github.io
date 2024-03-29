@@ -13,6 +13,7 @@
 
 :root {
     --bg: rgb(249, 249, 255);
+    --overlay: #3e64ff;
     --black: #212529;
     --gradient: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
     --gradientSupport: -webkit-linear-gradient(0deg,
@@ -561,6 +562,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1.25rem;
 }
 
 .swiper-client-msg::before{
@@ -598,7 +600,7 @@ li {
 
 .swiper-client-msg{
     padding: 5rem 8rem;
-    background: var(--white);
+    /* background: var(--white); */
     border-radius: 1rem;
     text-align: left;
     box-shadow: var(--shadow);
@@ -621,3 +623,46 @@ li {
 }
 
 /* Extracurricular Section Ends */
+
+
+/* Freelancing Section Starts */
+
+.section-freelancing{
+    background-image: url('../images/folio/3.jpg');
+    background-repeat: no-repeat;
+    background-size: 200rem;
+    padding: 0rem 0rem;
+    background-attachment: fixed;
+    position: relative;
+    transition: all 0.7s linear;
+    text-align: center;
+}
+
+.section-freelancing .overlay{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--overlay);
+    opacity:  0.5;
+}
+
+.section-freelancing .container{
+    position: relative;
+}
+
+.section-freelancing h2{
+    font-size: 5.4rem;
+}
+
+.section-freelancing span{
+    color: #a0f669;
+}
+
+.section-freelancing h2,
+.section-freelancing p{
+    color: var(--white);
+    margin-bottom: 1.8rem;
+}
+
+/* Freelancing Section Ends */
