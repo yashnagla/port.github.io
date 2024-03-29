@@ -676,6 +676,10 @@ li {
     transition: all 0.3s linear;
 }
 
+.map iframe:hover{
+    box-shadow: var(--shadow);
+}
+
 .section-contact-main .grid {
     gap: 3.2rem;
 }
