@@ -42,3 +42,25 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+
+
+// ===============================================
+// Creating a Scroll To Top tabbed component
+// ===============================================
+
+const navbar = document.querySelector(".navbar");
+
+const footerElem = document.querySelector(".section-footer");
+
+const scrollElement = document.createElement("div");
+scrollElement.classList.add("scrollTop-style");
+
+scrollElement.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll-top"></ion-icon>`;
+
+footerElem.after(scrollElement);
+
+const scrollTop = () => {
+  navbar.scrollIntoView({behavior: "smooth"});
+};
+
+scrollElement.addEventListener("click", scrollTop) 
