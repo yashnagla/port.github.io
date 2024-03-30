@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="my portfolio website to showcase the work I have done so far, the services I provide and all my professionals life.">
   <title>Yash Nagla</title>
 
   <!-- Font Awesome Icon CSS -->
@@ -21,26 +24,35 @@
   <!-- Ion Icons -->
   <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.3.1/esm/ionicons.min.js"
+    integrity="sha512-WsL2r6j6Im3HvCp3uuExL45LhU4qwsS4HgVHgti+k/9zXNQnLqiunaxwNxDl+NsLHryCUyGPBw2IV7mGe1Z7nQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Swiper JS Library -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
   <!-- Header Section Starts -->
   <header class="header">
-    <a href="index.html"><img src="images/logo.png" alt="Main Logo" class="logo" /></a>
+    <a href="index.html"><img src="images/logo.png" alt="Yash Nagla Logo" class="logo" /></a>
     <nav class="navbar">
       <ul class="navbar-lists">
-        <li><a href="/index.html" class="navbar-link home-link">Home</a></li>
+        <li><a href="/about.html" class="navbar-link about-link">About</a></li>
         <li><a href="/service.html" class="navbar-link service-link">Service</a></li>
         <li><a href="/portfolio.html" class="navbar-link portfolio-link">Portfolio</a></li>
         <li><a href="/contact.html" class="navbar-link contact-link">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="mobile-navbar-btn">
+      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+
+      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    </div>
+
   </header>
   <!-- Header Section Ends -->
 
@@ -163,35 +175,35 @@
             <span>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </span>
-            <a href="index.html">Home</a>
+            <a href="./index.html">Home</a>
           </li>
 
           <li>
             <span>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </span>
-            <a href="/about.html">About Us</a>
+            <a href="./about.html">About Us</a>
           </li>
 
           <li>
             <span>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </span>
-            <a href="service.html">Service</a>
+            <a href="./service.html">Service</a>
           </li>
 
           <li>
             <span>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </span>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="./portfolio.html">Portfolio</a>
           </li>
 
           <li>
             <span>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </span>
-            <a href="contact.html">Contact</a>
+            <a href="./contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -300,8 +312,6 @@
   <!-- Footer Section Ends -->
 
 
-  <!-- Swiper JS Library -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
