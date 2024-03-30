@@ -1,4 +1,17 @@
 // ===============================================
+// Responsive NavBar Section
+// ===============================================
+
+const mobile_nav = document.querySelector(".mobile-navbar-btn");
+const headerElem = document.querySelector(".header");
+
+mobile_nav.addEventListener("click", () => {
+  headerElem.classList.toggle("active");
+})
+
+
+
+// ===============================================
 // Creating a portfolio tabbed component
 // ===============================================
 
@@ -79,18 +92,18 @@ counterNum.forEach((curElem) => {
   const updateNumber = () => {
     const targetNumber = parseInt(curElem.dataset.number);
     // console.log(targetNumber);
-
+    
     const intialNum = parseInt(curElem.innerText);
     // console.log(intialNum);
-
+    
     const incrementNumber = Math.trunc(targetNumber / speed);
     // console.log(incrementNumber);
-
+    
     if(intialNum < targetNumber) {
       curElem.innerText = intialNum + incrementNumber;
       setTimeout(updateNumber, 10);
     }
   };
-
+  
   updateNumber();
 });
