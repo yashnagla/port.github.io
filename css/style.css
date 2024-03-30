@@ -3,6 +3,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
 
+/* Media Queries */
+@media (max-width: 980px) {
+    .header {
+        position: relative;
+    }
+
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 999;
+        border: 3px solid var(--black);
+        color: var(--black);
+    }
+
+    .mobile-nav-icon{
+        width: 5rem;
+        height: 5rem;
+        color: var(--black);
+    }
+
+    .header .logo{
+        width: 50%;
+        /* height: 40%; */
+    }
+
+    .navbar{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--gradient);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-lists {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .navbar-lists .navbar-link:link,
+    .navbar .navbar-lists .navbar-link:visited {
+        color: var(--black);
+        font-size: 3.2rem;
+    }
+
+}
 
 * {
     margin: 0;
@@ -160,7 +209,8 @@ li {
 }
 
 .header .logo {
-    height: 3rem;
+    width: 16rem;
+    /* height: 5rem; */
 }
 
 .navbar-lists {
@@ -182,6 +232,17 @@ li {
 .navbar-link:hover,
 .navbar-link:active {
     color: var(--helper);
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.mobile-nav-icon [name="close-outline"]{
+    display: none;
 }
 
 /* Header Section Ends */
