@@ -849,16 +849,16 @@ li {
     /* when we are in 980px we need to show the menu open icon */
     .mobile-navbar-btn {
         display: block;
-        /* background-color: #212529; */
         z-index: 99999;
-        border: 3px solid #212529;
-        color: #212529;
+        /* border: 0.2rem solid var(--black); */
+        color: var(--black);
     }
 
     .mobile-nav-icon {
         width: 5rem;
         height: 5rem;
         color: var(--black);
+        padding: 0;
     }
 
     .mobile-nav-icon[name="close-outline"] {
