@@ -7,12 +7,51 @@ const headerElem = document.querySelector(".header");
 
 mobile_nav.addEventListener("click", () => {
   headerElem.classList.toggle("active");
-})
+});
+
+// ===============================================
+// Sticky NavBar Section
+// ===============================================
+
+const heroSection = document.querySelector(".section-hero");
+
+const observer1 = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    // console.log(ent);
+    !ent.isIntersecting 
+      ? document.body.classList.add("sticky") 
+      : document.body.classList.remove("sticky");
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+observer1.observe(heroSection);
+
+
+// const bioSection = document.querySelector(".section-biodata");
+
+// const observer2 = new IntersectionObserver(
+//   (entries) => {
+//     const ent = entries[0];
+//     // console.log(ent);
+//     !ent.isIntersecting 
+//       ? document.body.classList.add("sticky2") 
+//       : document.body.classList.remove("sticky2");
+//   },
+//   {
+//     root: null,
+//     threshold: 0,
+//   }
+// );
+// observer2.observe(bioSection);
 
 
 
 // ===============================================
-// Creating a portfolio tabbed component
+// Creating a Portfolio Section
 // ===============================================
 
 const p_btns = document.querySelector(".p-btns");
@@ -46,16 +85,15 @@ p_btns.addEventListener("click", function (e) {
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 30,
-  autoplay:{
-    delay:2500,
-    disableOnInteraction:false,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
-
 
 // ===============================================
 // Creating a Scroll To Top Section
@@ -73,12 +111,10 @@ scrollElement.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll-top">
 footerElem.after(scrollElement);
 
 const scrollTop = () => {
-  navbar.scrollIntoView({behavior: "smooth"});
+  navbar.scrollIntoView({ behavior: "smooth" });
 };
 
-scrollElement.addEventListener("click", scrollTop) 
-
-
+scrollElement.addEventListener("click", scrollTop);
 
 // ===============================================
 // Animate Number Section
@@ -92,18 +128,18 @@ counterNum.forEach((curElem) => {
   const updateNumber = () => {
     const targetNumber = parseInt(curElem.dataset.number);
     // console.log(targetNumber);
-    
+
     const intialNum = parseInt(curElem.innerText);
     // console.log(intialNum);
-    
+
     const incrementNumber = Math.trunc(targetNumber / speed);
     // console.log(incrementNumber);
-    
-    if(intialNum < targetNumber) {
+
+    if (intialNum < targetNumber) {
       curElem.innerText = intialNum + incrementNumber;
       setTimeout(updateNumber, 10);
     }
   };
-  
+
   updateNumber();
 });

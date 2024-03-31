@@ -152,16 +152,16 @@ li {
 
 /* Header Section Starts */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0rem 4.8rem;
     height: 10rem;
     background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header .logo {
-    width: 16rem;
+    /* width: 16rem; */
     height: 5rem;
 }
 
@@ -179,7 +179,6 @@ li {
     text-transform: uppercase;
     color: var(--black);
     transition: all 0.3s linear;
-    font-family: "Poppins", sans-serif;
 }
 
 .navbar-link:hover,
@@ -201,6 +200,46 @@ li {
 }
 
 /* Header Section Ends */
+
+
+/* Sticky NavBar Section Starts */
+
+.sticky .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgb(36 220 211 / 46%);
+    box-shadow: var(--shadow);
+}
+
+.sticky .section-hero{
+    margin-top: 10rem;
+}
+
+
+/* .sticky2 .section-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(220, 189, 36, 0.46);
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: var(--shadow);
+}
+
+.sticky2 .section-hero {
+    margin-top: 10rem;
+} */
+
+
+/* Sticky NavBar Section Ends */
+
 
 /* Hero Section Starts */
 
@@ -831,14 +870,6 @@ li {
 /* Scroll To Top Button Section Ends */
 
 
-/* Service Section Starts */
-
-
-
-/* Service Section Ends */
-
-
-
 
 /* Media Queries */
 @media (max-width: 980px) {
@@ -850,14 +881,12 @@ li {
     .mobile-navbar-btn {
         display: block;
         z-index: 99999;
-        /* border: 0.2rem solid var(--black); */
-        color: var(--black);
     }
 
     .mobile-nav-icon {
         width: 5rem;
         height: 5rem;
-        color: var(--black);
+        color: var(--helper);
         padding: 0;
     }
 
