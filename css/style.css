@@ -379,35 +379,35 @@ li {
 }
 
 .bio-progress-bar span {
-    left: 84.3%;
+    left: 85.3%;
 }
 
 .bio-progress-2 span {
-    left: 74.3%;
+    left: 75.3%;
 }
 
 .bio-progress-3 span {
-    left: 44.3%;
+    left: 45.5%;
 }
 
 .bio-progress-4 span {
-    left: 63.3%;
+    left: 64.3%;
 }
 
 .bio-progress-5 span {
-    left: 43.3%;
+    left: 44.3%;
 }
 
 .bio-progress-6 span {
-    left: 54.3%;
+    left: 55.3%;
 }
 
 .bio-progress-7 span {
-    left: 54.3%;
+    left: 55.3%;
 }
 
 .bio-progress-8 span {
-    left: 44.3%;
+    left: 45.3%;
 }
 
 /* To create Caret */
@@ -509,11 +509,12 @@ li {
     background: var(--gradientSupport);
     text-align: center;
     transition: all 0.7s linear;
-    color: var(--white);
+    /* color: var(--white); */
 }
 
 .counter-numbers {
     font-size: 4.8rem;
+    color: var(--white);
 }
 
 .section-work-data p {
@@ -873,6 +874,11 @@ li {
 
 /* Media Queries */
 @media (max-width: 980px) {
+
+    html {
+        font-size: 50%;
+    }
+
     .header {
         position: relative;
     }
@@ -895,17 +901,17 @@ li {
     }
 
     .header .logo {
-        width: 50%;
-        height: 40%;
+        width: 30%;
+        height: 30%;
     }
 
     .navbar {
         width: 100%;
         height: 100vh;
-        background: var(--gradient);
         position: absolute;
         top: 0;
         left: 0;
+        background: var(--gradient);
         
         display: flex;
         justify-content: center;
@@ -917,6 +923,7 @@ li {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        z-index: 9999;
     }
 
     .navbar-lists {
@@ -935,15 +942,16 @@ li {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        z-index: 999;
-    }
-
-    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
-        display: block;
+        /* z-index: 999; */
     }
 
     .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
         display: none;
     }
+    
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+        display: block;
+    }
+
 
 }

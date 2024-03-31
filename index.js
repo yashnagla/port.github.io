@@ -19,8 +19,8 @@ const observer1 = new IntersectionObserver(
   (entries) => {
     const ent = entries[0];
     // console.log(ent);
-    !ent.isIntersecting 
-      ? document.body.classList.add("sticky") 
+    !ent.isIntersecting
+      ? document.body.classList.add("sticky")
       : document.body.classList.remove("sticky");
   },
   {
@@ -30,15 +30,14 @@ const observer1 = new IntersectionObserver(
 );
 observer1.observe(heroSection);
 
-
 // const bioSection = document.querySelector(".section-biodata");
 
 // const observer2 = new IntersectionObserver(
 //   (entries) => {
 //     const ent = entries[0];
 //     // console.log(ent);
-//     !ent.isIntersecting 
-//       ? document.body.classList.add("sticky2") 
+//     !ent.isIntersecting
+//       ? document.body.classList.add("sticky2")
 //       : document.body.classList.remove("sticky2");
 //   },
 //   {
@@ -47,8 +46,6 @@ observer1.observe(heroSection);
 //   }
 // );
 // observer2.observe(bioSection);
-
-
 
 // ===============================================
 // Creating a Portfolio Section
@@ -114,32 +111,91 @@ const scrollTop = () => {
   navbar.scrollIntoView({ behavior: "smooth" });
 };
 
+
 scrollElement.addEventListener("click", scrollTop);
 
 // ===============================================
 // Animate Number Section
 // ===============================================
 
-const counterNum = document.querySelectorAll(".counter-numbers");
+const workSection = document.querySelector('.section-work-data');
+const workObserver = new IntersectionObserver(
+  (entries, observer) => {
+    const [entry] = entries;
+    // console.log(entry);
 
-const speed = 200;
+  // if(entry.isInteresting == false)
+  if(!entry.isIntersecting) return;
 
-counterNum.forEach((curElem) => {
-  const updateNumber = () => {
-    const targetNumber = parseInt(curElem.dataset.number);
-    // console.log(targetNumber);
+  // animate number
 
-    const intialNum = parseInt(curElem.innerText);
-    // console.log(intialNum);
+  const counterNum = document.querySelectorAll(".counter-numbers");
 
-    const incrementNumber = Math.trunc(targetNumber / speed);
-    // console.log(incrementNumber);
+  const speed = 200;
 
-    if (intialNum < targetNumber) {
-      curElem.innerText = intialNum + incrementNumber;
-      setTimeout(updateNumber, 10);
-    }
-  };
+  counterNum.forEach((curElem) => {
+    const updateNumber = () => {
+      const targetNumber = parseInt(curElem.dataset.number);
+      // console.log(targetNumber);
 
-  updateNumber();
-});
+      const initialNum = parseInt(curElem.innerText);
+      // console.log(initialNum);
+
+      const incrementNumber = Math.trunc(targetNumber / speed);
+      // console.log(incrementNumber);
+
+      if (initialNum < targetNumber) {
+        curElem.innerText = `${initialNum + incrementNumber}+`;
+        setTimeout(updateNumber, 10);
+      }
+
+    };
+    
+    updateNumber();
+  });
+
+  observer.unobserve(workSection);
+
+}, 
+{
+  root: null,
+  threshold: 0,
+}
+);
+
+workObserver.observe(workSection);
+
+// const workSection = document.querySelector('.section-work-data');
+// const counterNum = document.querySelectorAll(".counter-numbers");
+// const speed = 200;
+
+// const workObserver = new IntersectionObserver(
+//   (entries, observer) => {
+//     entries.forEach(entry => {
+//       if (!entry.isIntersecting) return;
+
+//       counterNum.forEach(curElem => {
+//         const targetNumber = parseInt(curElem.dataset.number);
+//         const initialNum = parseInt(curElem.innerText);
+//         const incrementNumber = Math.ceil(targetNumber / speed);
+
+//         const updateNumber = () => {
+//           if (initialNum < targetNumber) {
+//             curElem.innerText = `${initialNum + incrementNumber}+`;
+//             setTimeout(updateNumber, 10);
+//           }
+//         };
+
+//         updateNumber();
+//       });
+
+//       observer.unobserve(workSection);
+//     });
+//   }, 
+//   {
+//     root: null,
+//     threshold: 0,
+//   }
+// );
+
+// workObserver.observe(workSection);
